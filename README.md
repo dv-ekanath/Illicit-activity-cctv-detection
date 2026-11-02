@@ -1,4 +1,4 @@
-# 🔍 Real-Time Illicit Activity Detection System
+# Real-Time Illicit Activity Detection System
 
 A research-grade surveillance AI prototype that detects illicit activity (fighting, robbery, anomalies) in real time using CCTV footage, with bounding box overlays, confidence scoring, and an alerting pipeline.
 
@@ -10,7 +10,7 @@ A research-grade surveillance AI prototype that detects illicit activity (fighti
 
 ---
 
-## 📌 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Pipeline](#pipeline)
@@ -79,7 +79,7 @@ Confidence ≥ 0.40 + class ≠ Normal
 
 ---
 
-### 🔦 Zero-DCE++ Two-Stage Training
+### Zero-DCE++ Two-Stage Training
 
 Zero-DCE++ is trained in two sequential stages before being used in the pipeline. This is an **offline training process** — the resulting weights (`stage2_best.pth`) are frozen and loaded at inference time.
 
@@ -273,8 +273,8 @@ project/
 ### YOLOv11s
 | Metric | Value |
 |--------|-------|
-| mAP50 | **0.907** ✅ |
-| mAP50-95 | **0.534** ✅ |
+| mAP50 | **0.907** |
+| mAP50-95 | **0.534** |
 | Precision | 0.869 |
 | Recall | 0.850 |
 | Inference Speed | 2.0 ms/frame |
@@ -287,7 +287,7 @@ project/
 | Robbery | 70.06% ± 7.10 |
 | Vandalism | 68.73% ± 9.32 |
 | Normal | 78.29% ± 3.58 |
-| **Overall Macro F1** | **70.21% ± 5.64%** ✅ |
+| **Overall Macro F1** | **70.21% ± 5.64%** |
 
 ---
 
@@ -427,14 +427,14 @@ the summary, decisions and TODOs are in `docs/vpa_samples/{SUMMARY,DECISIONS,PRO
 
 | Week | Task | Status |
 |------|------|--------|
-| 1 | Environment setup, dataset download, preprocessing | ✅ Done |
-| 2 | Zero-DCE++ two-stage training + YOLOv11 fine-tuning | ✅ Done |
-| 3 | ByteTrack integration + clip extraction pipeline | ✅ Done |
-| 4 | VideoMAE 4-fold CV training + TTA evaluation | ✅ Done |
-| 5 | Full pipeline integration (FastAPI + Redis + VideoMAE worker) | ✅ Done |
-| 6 | Alert pipeline — Supabase Storage + PostgreSQL + Twilio MMS | ✅ Done |
-| 7 | React dashboard + Supabase Realtime incident feed | ✅ Done |
-| 8 | End-to-end evaluation (mAP, F1, latency) + report writing | ⏳ Pending |
+| 1 | Environment setup, dataset download, preprocessing | Done |
+| 2 | Zero-DCE++ two-stage training + YOLOv11 fine-tuning | Done |
+| 3 | ByteTrack integration + clip extraction pipeline | Done |
+| 4 | VideoMAE 4-fold CV training + TTA evaluation | Done |
+| 5 | Full pipeline integration (FastAPI + Redis + VideoMAE worker) | Done |
+| 6 | Alert pipeline — Supabase Storage + PostgreSQL + Twilio MMS | Done |
+| 7 | React dashboard + Supabase Realtime incident feed | Done |
+| 8 | End-to-end evaluation (mAP, F1, latency) + report writing | Pending |
 
 ---
 
