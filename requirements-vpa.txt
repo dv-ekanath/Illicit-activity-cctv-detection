@@ -1,0 +1,12 @@
+# Extra dependencies for the VPA (video processing & analytics) pre-training pipeline.
+# Core stack (torch, torchvision, opencv-python, numpy, scipy, matplotlib, pyyaml, pandas, ultralytics, lapx)
+# is already part of the project environment (conda env: illicit_detect).
+av>=18.0                # PyAV: timestamp-based decoding, stream metadata, I/P/B picture types (replaces ffprobe)
+scikit-image>=0.26      # SSIM / PSNR for enhancement comparisons
+scenedetect>=0.7        # PySceneDetect cross-check for shot boundaries (S3)
+imageio>=2.38           # GIF helpers
+pyiqa>=0.1.16           # NIQE / BRISQUE no-reference quality metrics (S4 comparison)
+transnetv2-pytorch>=1.0.5  # pretrained shot-boundary detector (S3); install with --no-deps (weights ship in the wheel)
+nbformat>=5.11          # build the walkthrough notebook
+nbconvert>=7.17         # execute the walkthrough notebook
+ipykernel               # kernel used to execute the notebook
