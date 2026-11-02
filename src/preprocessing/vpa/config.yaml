@@ -1,0 +1,139 @@
+# VPA pipeline settings - every threshold / weight lives here.
+# Values marked (S1) were set from the dataset profile; see docs/vpa_samples/DECISIONS.md.
+
+general:
+  seed: 42
+  sample_max_seconds: 300        # analysis cap per video in sample runs (null = whole video)
+  full_max_seconds: null         # cap per video in full runs (null = whole video)
+
+decode:                          # S2
+  target_fps: 12
+  clip_len: 16                   # frames per clip stored
+  clip_stride: 4                 # every 4th 12-FPS frame -> 64 frames ~= 5.33 s
+
+profile:                         # S1
+  quality_every: 15              # sharpness/noise/blockiness on every Nth source frame
+  overlay_frames: 40             # frames sampled for the timestamp/overlay detector
+  workers: 8
+  moving_camera_shift_px: 1.5    # phase-correlation shift/0.1s counted as camera motion
+  moving_camera_frac: 0.35       # fraction of sampled pairs shifting -> video flagged moving-camera
+  s5_min_video_fraction: 0.05    # S5 is built/used only if >= this share of videos move
+  dark_percentile: 5             # dark threshold = luma of the darkest 5 % of all frames
+  vqa: auto                      # auto | off  (DOVER / FAST-VQA via pyiqa when available)
+
+clean:                           # S3
+  letterbox:
+    enabled: true
+    sample_frames: 30
+    bar_mean_max: 22             # a bar row/col: mean luma below this ...
+    bar_std_max: 9               # ... and std below this (flat black)
+    min_bar_px: 4
+    safety_px: 2                 # extra pixels trimmed next to a detected bar
+    max_crop_frac: 0.35          # never remove more than this share per side
+  shot_cut:
+    method: both                 # classical | transnetv2 | both (union; TransNetV2 = pretrained, CPU)
+    hist_bins: [16, 8]           # H x S bins
+    hist_abs_min: 0.40           # Bhattacharyya distance floor for a cut
+    hist_mad_k: 6.0              # ... or local median + k*MAD, whichever is larger
+    ecr_min: 0.55                # edge-change ratio must also exceed this (rejects flashes)
+    min_gap_frames: 12           # NMS window (1 s at 12 FPS)
+  frozen:
+    diff_thr: 0.05               # mean |gray diff| below this = identical frame
+    min_run: 4                   # >= this many consecutive identical frames = frozen run
+  black:
+    mean_max: 10
+    std_max: 8
+  overlay:
+    enabled: true
+    method: classical            # classical | east (TODO if unavailable)
+    stroke_thr: 40               # top-hat / black-hat contrast for text strokes
+    stroke_kernel: 7
+    bright_min: 185              # bright strokes must be near-saturated ...
+    dark_max: 70                 # ... dark strokes near-black
+    freq_min: 0.30               # stroke must be present in this share of sampled frames
+    border_frac: 0.14           # text must sit in the outer band (top/bottom/left/right)
+    min_w: 20
+    min_h: 5
+    max_h: 36
+    min_aspect: 2.5              # text-line-like components
+    min_density: 0.07
+    max_density: 0.70
+    max_area_frac: 0.12          # total mask area cap (otherwise treat as a false positive)
+    inpaint_radius: 3
+
+enhance:                         # S4
+  dark_threshold: 50             # (S1) one threshold, mean luma Y, used everywhere
+  hysteresis: 5
+  keep_mono: true                # monochrome (IR/grayscale) sources stay monochrome after Zero-DCE++
+  smooth_window: 9               # frames, median filter on luma before the dark decision
+  deflicker:
+    alpha_ema: 0.6               # EMA weight of the previous frame's curve parameters
+    luma_ema: 0.8                # EMA on mean luma of enhanced frames
+    max_gain: 1.35
+  denoise:
+    method: fastdvdnet           # fastdvdnet (pretrained, auto-download; falls back) | classical | none
+    window: 5
+    h: 4
+    h_color: 4
+
+camera:                          # S5
+  enabled: auto                  # auto | on | off
+  orb_features: 800
+  min_inliers: 25
+  ransac_thr: 3.0
+  motion_px_thr: 0.6             # median per-frame translation that counts as camera motion
+
+motion:                          # S6
+  mog2: {history: 120, var_threshold: 20, warmup_frames: 24}
+  shadow: {v_low: 0.45, v_high: 0.95, s_tol: 40, h_tol: 12}
+  morph: {open: 3, close: 7}
+  min_blob_area: 40
+  flow: {method: farneback, scale: 1.0, pyr_scale: 0.5, levels: 3, winsize: 15, iterations: 3, poly_n: 5, poly_sigma: 1.2}
+  flow_min_mag: 0.4              # pixels (per 12 FPS step) below which flow is ignored in entropy
+  entropy_bins: 16
+  raft: {enabled: true, model: raft_small, max_pairs: 12}
+  global_change_fg: 0.55         # foreground ratio above this = illumination change / scene swap, not motion
+  mhi_duration: 12               # frames (1 s)
+
+actors:                          # S7
+  detector: auto                 # auto | finetuned | coco (auto = whichever sees more people on sample frames)
+  conf: 0.25
+  imgsz: 640
+  person_class_names: [person]
+  tracker: {track_high_thresh: 0.25, track_low_thresh: 0.1, new_track_thresh: 0.25,
+            track_buffer: 24, match_thresh: 0.8, fuse_score: true}
+  interact_dist_h: 1.6           # people closer than this many person-heights are "interacting"
+  crop:
+    margin: 0.25
+    min_side: 96                 # px, never zoom in further than this
+    ema: 0.7                     # crop window smoothing
+    fallback: full_frame
+
+temporal:                        # S8
+  weights: {motion: 0.45, fg: 0.15, interaction: 0.40}
+  motion_ref: 0.8                # mean flow magnitude (px/step) mapped to 1.0 (p90 of motion inside GT events on the sample set)
+  fg_ref: 0.10                   # foreground ratio mapped to 1.0
+  sg_window: 25                  # Savitzky-Golay window (frames)
+  sg_poly: 3
+  hysteresis: {high: 0.25, low: 0.15}
+  peak_prominence: 0.08
+  min_segment_s: 2.0
+  merge_gap_s: 2.0
+  pad_s: 1.0
+  clips_per_video: {train: 16, test: 8}
+  min_start_sep: 16              # frames between clip starts of one video
+  hard_negative_frac: 0.25       # share of Normal clips taken from the highest-activity windows
+  gate:
+    frozen_frac_max: 0.5
+    black_luma_max: 10
+    blur_lap_var_min: 130.0      # (S1) half of the 5th percentile (269) of per-video median Laplacian variance
+    abnormal_min_motion: 0.08    # mean flow magnitude over the clip for abnormal classes
+    old_std_min: 0.01            # legacy validity check, kept for comparison
+  dedup_threshold: 0.99
+  temporal_jitter: 3
+
+package:                         # S9
+  clip_dtype: uint8              # uint8 (plan) | float32 (legacy loader format)
+  clip_size: 224
+  framing: actor                 # actor | letterbox | stretch
+  sidecar: true
