@@ -1,0 +1,5 @@
+{
+  "luma_ema": 0.8,
+  "curve_param_ema": 0.6,
+  "max_gain": 1.35
+}

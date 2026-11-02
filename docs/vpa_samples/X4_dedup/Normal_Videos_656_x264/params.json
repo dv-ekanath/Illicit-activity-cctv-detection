@@ -1,0 +1,5 @@
+{
+  "existing_function": "deduplicate_clips",
+  "threshold": 0.99,
+  "fingerprint": "mean |frame diff| per pixel"
+}

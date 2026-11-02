@@ -1,0 +1,11 @@
+{
+  "dtype": "uint8",
+  "shape": [
+    16,
+    224,
+    224,
+    3
+  ],
+  "file": "Robbery137_x264_c0008.npy",
+  "sidecar": "Robbery137_x264_c0008.json"
+}

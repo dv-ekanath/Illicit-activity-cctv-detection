@@ -1,0 +1,5 @@
+{
+  "rule": "step = round(src_fps / 12)",
+  "src_fps": 30.0,
+  "step": 2
+}

@@ -1,0 +1,499 @@
+{
+  "S1_dataset_profile": {
+    "stage": "S1",
+    "op": "dataset_profile",
+    "what": "Dataset-level profile of all UCF-Crime videos used: histograms of duration, brightness, sharpness, noise, bit rate, resolution and FPS per class.",
+    "videos": {
+      "ALL": "S1_dataset_profile/ALL"
+    }
+  },
+  "S1_metadata": {
+    "stage": "S1",
+    "op": "metadata",
+    "what": "Reads container/stream metadata (codec, resolution, nominal vs measured FPS, VFR flag, bitrate, duration).",
+    "videos": {
+      "Vandalism032_x264": "S1_metadata/Vandalism032_x264",
+      "Vandalism038_x264": "S1_metadata/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S1_metadata/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S1_metadata/Normal_Videos_913_x264",
+      "Fighting018_x264": "S1_metadata/Fighting018_x264",
+      "Robbery137_x264": "S1_metadata/Robbery137_x264",
+      "Vandalism017_x264": "S1_metadata/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S1_metadata/Normal_Videos_656_x264"
+    }
+  },
+  "S1_ipb_frame_types": {
+    "stage": "S1",
+    "op": "ipb_frame_types",
+    "what": "Counts I/P/B picture types over the whole video.",
+    "videos": {
+      "Vandalism032_x264": "S1_ipb_frame_types/Vandalism032_x264",
+      "Vandalism038_x264": "S1_ipb_frame_types/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S1_ipb_frame_types/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S1_ipb_frame_types/Normal_Videos_913_x264",
+      "Fighting018_x264": "S1_ipb_frame_types/Fighting018_x264",
+      "Robbery137_x264": "S1_ipb_frame_types/Robbery137_x264",
+      "Vandalism017_x264": "S1_ipb_frame_types/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S1_ipb_frame_types/Normal_Videos_656_x264"
+    }
+  },
+  "S1_quality_stats": {
+    "stage": "S1",
+    "op": "quality_stats",
+    "what": "Per-video brightness, sharpness (Laplacian variance), noise (Immerkaer sigma), blockiness, frozen/black share, camera motion.",
+    "videos": {
+      "Vandalism032_x264": "S1_quality_stats/Vandalism032_x264",
+      "Vandalism038_x264": "S1_quality_stats/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S1_quality_stats/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S1_quality_stats/Normal_Videos_913_x264",
+      "Fighting018_x264": "S1_quality_stats/Fighting018_x264",
+      "Robbery137_x264": "S1_quality_stats/Robbery137_x264",
+      "Vandalism017_x264": "S1_quality_stats/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S1_quality_stats/Normal_Videos_656_x264"
+    }
+  },
+  "X6_yolo_annotation_boxes": {
+    "stage": "X6",
+    "op": "yolo_annotation_boxes",
+    "what": "EXISTING op: LLVIP XML / ExDARK bbGt annotations converted to YOLO txt, drawn back on the image to verify the conversion.",
+    "videos": {
+      "ALL": "X6_yolo_annotation_boxes/ALL"
+    }
+  },
+  "S7_detector_check": {
+    "stage": "S7",
+    "op": "detector_check",
+    "what": "Visual + numeric check of the existing fine-tuned YOLOv11s against COCO yolo11s.pt on enhanced UCF-Crime frames (both without any training); chosen detector: coco.",
+    "videos": {
+      "ALL": "S7_detector_check/ALL"
+    }
+  },
+  "S2_resample_12fps": {
+    "stage": "S2",
+    "op": "resample_12fps",
+    "what": "Resamples to exactly 12 FPS by picking the source frame nearest to each t = k/12 s (OLD: every round(30/12)-th frame = 15.0 FPS).",
+    "videos": {
+      "Vandalism032_x264": "S2_resample_12fps/Vandalism032_x264",
+      "Vandalism038_x264": "S2_resample_12fps/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S2_resample_12fps/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S2_resample_12fps/Normal_Videos_913_x264",
+      "Fighting018_x264": "S2_resample_12fps/Fighting018_x264",
+      "Robbery137_x264": "S2_resample_12fps/Robbery137_x264",
+      "Vandalism017_x264": "S2_resample_12fps/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S2_resample_12fps/Normal_Videos_656_x264"
+    }
+  },
+  "X1_frame_sampling_step": {
+    "stage": "X1",
+    "op": "frame_sampling_step",
+    "what": "EXISTING op (extract_clips._load_frames): keep every round(src_fps/12)-th decoded frame; 30 FPS -> step 2 -> 15.0 FPS.",
+    "videos": {
+      "Vandalism032_x264": "X1_frame_sampling_step/Vandalism032_x264",
+      "Vandalism038_x264": "X1_frame_sampling_step/Vandalism038_x264",
+      "Normal_Videos_722_x264": "X1_frame_sampling_step/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "X1_frame_sampling_step/Normal_Videos_913_x264",
+      "Fighting018_x264": "X1_frame_sampling_step/Fighting018_x264",
+      "Robbery137_x264": "X1_frame_sampling_step/Robbery137_x264",
+      "Vandalism017_x264": "X1_frame_sampling_step/Vandalism017_x264",
+      "Normal_Videos_656_x264": "X1_frame_sampling_step/Normal_Videos_656_x264"
+    }
+  },
+  "X2_resize_stretch_vs_letterbox": {
+    "stage": "X2",
+    "op": "resize_stretch_vs_letterbox",
+    "what": "EXISTING op: every frame was stretched to 640x640; a 320x240 frame (4:3) gets 33% horizontal stretch.",
+    "videos": {
+      "Vandalism032_x264": "X2_resize_stretch_vs_letterbox/Vandalism032_x264",
+      "Vandalism038_x264": "X2_resize_stretch_vs_letterbox/Vandalism038_x264",
+      "Normal_Videos_722_x264": "X2_resize_stretch_vs_letterbox/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "X2_resize_stretch_vs_letterbox/Normal_Videos_913_x264",
+      "Fighting018_x264": "X2_resize_stretch_vs_letterbox/Fighting018_x264",
+      "Robbery137_x264": "X2_resize_stretch_vs_letterbox/Robbery137_x264",
+      "Vandalism017_x264": "X2_resize_stretch_vs_letterbox/Vandalism017_x264",
+      "Normal_Videos_656_x264": "X2_resize_stretch_vs_letterbox/Normal_Videos_656_x264"
+    }
+  },
+  "X3_zerodce_dark_frame": {
+    "stage": "X3",
+    "op": "zerodce_dark_frame",
+    "what": "EXISTING op: Zero-DCE++ (stage-2 weights) brightens the darkest frame of the video (luma 80); trigger was grayscale-mean < 50.",
+    "videos": {
+      "Vandalism032_x264": "X3_zerodce_dark_frame/Vandalism032_x264",
+      "Vandalism038_x264": "X3_zerodce_dark_frame/Vandalism038_x264",
+      "Normal_Videos_722_x264": "X3_zerodce_dark_frame/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "X3_zerodce_dark_frame/Normal_Videos_913_x264",
+      "Fighting018_x264": "X3_zerodce_dark_frame/Fighting018_x264",
+      "Robbery137_x264": "X3_zerodce_dark_frame/Robbery137_x264",
+      "Vandalism017_x264": "X3_zerodce_dark_frame/Vandalism017_x264",
+      "Normal_Videos_656_x264": "X3_zerodce_dark_frame/Normal_Videos_656_x264"
+    }
+  },
+  "S3_letterbox_crop": {
+    "stage": "S3",
+    "op": "letterbox_crop",
+    "what": "Detects black letter/pillar-box bars from flat-black row/column profiles and crops them.",
+    "videos": {
+      "Vandalism032_x264": "S3_letterbox_crop/Vandalism032_x264",
+      "Vandalism038_x264": "S3_letterbox_crop/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S3_letterbox_crop/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S3_letterbox_crop/Normal_Videos_913_x264",
+      "Fighting018_x264": "S3_letterbox_crop/Fighting018_x264",
+      "Robbery137_x264": "S3_letterbox_crop/Robbery137_x264",
+      "Vandalism017_x264": "S3_letterbox_crop/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S3_letterbox_crop/Normal_Videos_656_x264"
+    }
+  },
+  "S3_overlay_text_mask": {
+    "stage": "S3",
+    "op": "overlay_text_mask",
+    "what": "Finds timestamps / logos / captions as recurring high-contrast strokes in the border band, then inpaints them.",
+    "videos": {
+      "Vandalism032_x264": "S3_overlay_text_mask/Vandalism032_x264",
+      "Vandalism038_x264": "S3_overlay_text_mask/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S3_overlay_text_mask/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S3_overlay_text_mask/Normal_Videos_913_x264",
+      "Fighting018_x264": "S3_overlay_text_mask/Fighting018_x264",
+      "Robbery137_x264": "S3_overlay_text_mask/Robbery137_x264",
+      "Vandalism017_x264": "S3_overlay_text_mask/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S3_overlay_text_mask/Normal_Videos_656_x264"
+    }
+  },
+  "S3_shot_boundary": {
+    "stage": "S3",
+    "op": "shot_boundary",
+    "what": "Finds hard cuts by combining an HSV histogram distance with an edge-change ratio, then splits the video into shots.",
+    "videos": {
+      "Vandalism032_x264": "S3_shot_boundary/Vandalism032_x264",
+      "Vandalism038_x264": "S3_shot_boundary/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S3_shot_boundary/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S3_shot_boundary/Normal_Videos_913_x264",
+      "Fighting018_x264": "S3_shot_boundary/Fighting018_x264",
+      "Robbery137_x264": "S3_shot_boundary/Robbery137_x264",
+      "Vandalism017_x264": "S3_shot_boundary/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S3_shot_boundary/Normal_Videos_656_x264"
+    }
+  },
+  "S3_frozen_black_frames": {
+    "stage": "S3",
+    "op": "frozen_black_frames",
+    "what": "Flags duplicated (frame-diff ~ 0) and blank frames on the 12 FPS timeline.",
+    "videos": {
+      "Vandalism032_x264": "S3_frozen_black_frames/Vandalism032_x264",
+      "Vandalism038_x264": "S3_frozen_black_frames/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S3_frozen_black_frames/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S3_frozen_black_frames/Normal_Videos_913_x264",
+      "Fighting018_x264": "S3_frozen_black_frames/Fighting018_x264",
+      "Robbery137_x264": "S3_frozen_black_frames/Robbery137_x264",
+      "Vandalism017_x264": "S3_frozen_black_frames/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S3_frozen_black_frames/Normal_Videos_656_x264"
+    }
+  },
+  "S4_brightness_measure": {
+    "stage": "S4",
+    "op": "brightness_measure",
+    "what": "One brightness measure (mean luma Y) and one threshold (from S1) decide, with temporal smoothing and hysteresis, which frames are enhanced.",
+    "videos": {
+      "Vandalism032_x264": "S4_brightness_measure/Vandalism032_x264",
+      "Vandalism038_x264": "S4_brightness_measure/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S4_brightness_measure/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S4_brightness_measure/Normal_Videos_913_x264",
+      "Fighting018_x264": "S4_brightness_measure/Fighting018_x264",
+      "Robbery137_x264": "S4_brightness_measure/Robbery137_x264",
+      "Vandalism017_x264": "S4_brightness_measure/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S4_brightness_measure/Normal_Videos_656_x264"
+    }
+  },
+  "S4_enhancement_comparison": {
+    "stage": "S4",
+    "op": "enhancement_comparison",
+    "what": "4-way comparison: raw vs CLAHE (baseline only) vs Zero-DCE++ vs Zero-DCE++ with temporal denoising and deflickering.",
+    "videos": {
+      "Vandalism032_x264": "S4_enhancement_comparison/Vandalism032_x264",
+      "Vandalism038_x264": "S4_enhancement_comparison/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S4_enhancement_comparison/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S4_enhancement_comparison/Normal_Videos_913_x264",
+      "Fighting018_x264": "S4_enhancement_comparison/Fighting018_x264",
+      "Robbery137_x264": "S4_enhancement_comparison/Robbery137_x264",
+      "Vandalism017_x264": "S4_enhancement_comparison/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S4_enhancement_comparison/Normal_Videos_656_x264"
+    }
+  },
+  "S4_temporal_denoise": {
+    "stage": "S4",
+    "op": "temporal_denoise",
+    "what": "Multi-frame (temporal) denoising of the enhanced frames (FastDVDnet pretrained, else cv2 fastNlMeansMulti).",
+    "videos": {
+      "Vandalism032_x264": "S4_temporal_denoise/Vandalism032_x264",
+      "Vandalism038_x264": "S4_temporal_denoise/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S4_temporal_denoise/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S4_temporal_denoise/Normal_Videos_913_x264",
+      "Fighting018_x264": "S4_temporal_denoise/Fighting018_x264",
+      "Robbery137_x264": "S4_temporal_denoise/Robbery137_x264",
+      "Vandalism017_x264": "S4_temporal_denoise/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S4_temporal_denoise/Normal_Videos_656_x264"
+    }
+  },
+  "S4_deflicker": {
+    "stage": "S4",
+    "op": "deflicker",
+    "what": "Temporal deflicker: Zero-DCE++ curve parameters are EMA-smoothed across frames and the frame brightness is smoothed (zero-phase EMA).",
+    "videos": {
+      "Vandalism032_x264": "S4_deflicker/Vandalism032_x264",
+      "Vandalism038_x264": "S4_deflicker/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S4_deflicker/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S4_deflicker/Normal_Videos_913_x264",
+      "Fighting018_x264": "S4_deflicker/Fighting018_x264",
+      "Robbery137_x264": "S4_deflicker/Robbery137_x264",
+      "Vandalism017_x264": "S4_deflicker/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S4_deflicker/Normal_Videos_656_x264"
+    }
+  },
+  "S4_enhancement_metrics": {
+    "stage": "S4",
+    "op": "enhancement_metrics",
+    "what": "Numbers behind the 4-way comparison: brightness, flicker index, noise sigma, NIQE, BRISQUE and YOLO persons per frame.",
+    "videos": {
+      "Vandalism032_x264": "S4_enhancement_metrics/Vandalism032_x264",
+      "Vandalism038_x264": "S4_enhancement_metrics/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S4_enhancement_metrics/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S4_enhancement_metrics/Normal_Videos_913_x264",
+      "Fighting018_x264": "S4_enhancement_metrics/Fighting018_x264",
+      "Robbery137_x264": "S4_enhancement_metrics/Robbery137_x264",
+      "Vandalism017_x264": "S4_enhancement_metrics/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S4_enhancement_metrics/Normal_Videos_656_x264"
+    }
+  },
+  "S6_background_subtraction": {
+    "stage": "S6",
+    "op": "background_subtraction",
+    "what": "MOG2 foreground -> HSV shadow removal (shadow = darker V, same H and S) -> morphological opening/closing -> connected components.",
+    "videos": {
+      "Vandalism032_x264": "S6_background_subtraction/Vandalism032_x264",
+      "Vandalism038_x264": "S6_background_subtraction/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S6_background_subtraction/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S6_background_subtraction/Normal_Videos_913_x264",
+      "Fighting018_x264": "S6_background_subtraction/Fighting018_x264",
+      "Robbery137_x264": "S6_background_subtraction/Robbery137_x264",
+      "Vandalism017_x264": "S6_background_subtraction/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S6_background_subtraction/Normal_Videos_656_x264"
+    }
+  },
+  "S6_optical_flow": {
+    "stage": "S6",
+    "op": "optical_flow",
+    "what": "Dense optical flow between consecutive 12-FPS frames, summarised as magnitude, direction entropy (chaotic vs coherent) and divergence/curl.",
+    "videos": {
+      "Vandalism032_x264": "S6_optical_flow/Vandalism032_x264",
+      "Vandalism038_x264": "S6_optical_flow/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S6_optical_flow/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S6_optical_flow/Normal_Videos_913_x264",
+      "Fighting018_x264": "S6_optical_flow/Fighting018_x264",
+      "Robbery137_x264": "S6_optical_flow/Robbery137_x264",
+      "Vandalism017_x264": "S6_optical_flow/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S6_optical_flow/Normal_Videos_656_x264"
+    }
+  },
+  "S6_motion_history_image": {
+    "stage": "S6",
+    "op": "motion_history_image",
+    "what": "Motion History Image: each foreground pixel is stamped with the newest time it moved and fades over 1 s.",
+    "videos": {
+      "Vandalism032_x264": "S6_motion_history_image/Vandalism032_x264",
+      "Vandalism038_x264": "S6_motion_history_image/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S6_motion_history_image/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S6_motion_history_image/Normal_Videos_913_x264",
+      "Fighting018_x264": "S6_motion_history_image/Fighting018_x264",
+      "Robbery137_x264": "S6_motion_history_image/Robbery137_x264",
+      "Vandalism017_x264": "S6_motion_history_image/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S6_motion_history_image/Normal_Videos_656_x264"
+    }
+  },
+  "S6_motion_energy_signal": {
+    "stage": "S6",
+    "op": "motion_energy_signal",
+    "what": "Collapses the video to one motion-energy value per frame (mean flow magnitude) plus companions.",
+    "videos": {
+      "Vandalism032_x264": "S6_motion_energy_signal/Vandalism032_x264",
+      "Vandalism038_x264": "S6_motion_energy_signal/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S6_motion_energy_signal/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S6_motion_energy_signal/Normal_Videos_913_x264",
+      "Fighting018_x264": "S6_motion_energy_signal/Fighting018_x264",
+      "Robbery137_x264": "S6_motion_energy_signal/Robbery137_x264",
+      "Vandalism017_x264": "S6_motion_energy_signal/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S6_motion_energy_signal/Normal_Videos_656_x264"
+    }
+  },
+  "S7_person_detection": {
+    "stage": "S7",
+    "op": "person_detection",
+    "what": "Existing YOLOv11s (coco) finds people on the enhanced frame (no retraining).",
+    "videos": {
+      "Vandalism032_x264": "S7_person_detection/Vandalism032_x264",
+      "Vandalism038_x264": "S7_person_detection/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S7_person_detection/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S7_person_detection/Normal_Videos_913_x264",
+      "Fighting018_x264": "S7_person_detection/Fighting018_x264",
+      "Robbery137_x264": "S7_person_detection/Robbery137_x264",
+      "Vandalism017_x264": "S7_person_detection/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S7_person_detection/Normal_Videos_656_x264"
+    }
+  },
+  "S7_bytetrack_ids": {
+    "stage": "S7",
+    "op": "bytetrack_ids",
+    "what": "ByteTrack links the YOLO detections across frames, giving each person a persistent ID and a trajectory.",
+    "videos": {
+      "Vandalism032_x264": "S7_bytetrack_ids/Vandalism032_x264",
+      "Vandalism038_x264": "S7_bytetrack_ids/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S7_bytetrack_ids/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S7_bytetrack_ids/Normal_Videos_913_x264",
+      "Fighting018_x264": "S7_bytetrack_ids/Fighting018_x264",
+      "Robbery137_x264": "S7_bytetrack_ids/Robbery137_x264",
+      "Vandalism017_x264": "S7_bytetrack_ids/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S7_bytetrack_ids/Normal_Videos_656_x264"
+    }
+  },
+  "S7_interaction_signals": {
+    "stage": "S7",
+    "op": "interaction_signals",
+    "what": "Per frame: people count, minimum distance between people (in person heights), box overlap, speed per track, and a combined interaction score.",
+    "videos": {
+      "Vandalism032_x264": "S7_interaction_signals/Vandalism032_x264",
+      "Vandalism038_x264": "S7_interaction_signals/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S7_interaction_signals/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S7_interaction_signals/Normal_Videos_913_x264",
+      "Fighting018_x264": "S7_interaction_signals/Fighting018_x264",
+      "Robbery137_x264": "S7_interaction_signals/Robbery137_x264",
+      "Vandalism017_x264": "S7_interaction_signals/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S7_interaction_signals/Normal_Videos_656_x264"
+    }
+  },
+  "S7_actor_centred_crop": {
+    "stage": "S7",
+    "op": "actor_centred_crop",
+    "what": "Crops the union of the interacting people plus a margin, smooths the window over time, letterboxes it and resizes to 224x224 with INTER_AREA.",
+    "videos": {
+      "Vandalism032_x264": "S7_actor_centred_crop/Vandalism032_x264",
+      "Vandalism038_x264": "S7_actor_centred_crop/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S7_actor_centred_crop/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S7_actor_centred_crop/Normal_Videos_913_x264",
+      "Fighting018_x264": "S7_actor_centred_crop/Fighting018_x264",
+      "Robbery137_x264": "S7_actor_centred_crop/Robbery137_x264",
+      "Vandalism017_x264": "S7_actor_centred_crop/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S7_actor_centred_crop/Normal_Videos_656_x264"
+    }
+  },
+  "S8_activity_score": {
+    "stage": "S8",
+    "op": "activity_score",
+    "what": "Per-frame activity score = weighted motion energy + foreground ratio + interaction signal, smoothed (Savitzky-Golay); hysteresis thresholds and peaks give action proposals.",
+    "videos": {
+      "Vandalism032_x264": "S8_activity_score/Vandalism032_x264",
+      "Vandalism038_x264": "S8_activity_score/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S8_activity_score/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S8_activity_score/Normal_Videos_913_x264",
+      "Fighting018_x264": "S8_activity_score/Fighting018_x264",
+      "Robbery137_x264": "S8_activity_score/Robbery137_x264",
+      "Vandalism017_x264": "S8_activity_score/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S8_activity_score/Normal_Videos_656_x264"
+    }
+  },
+  "S8_motion_guided_sampling": {
+    "stage": "S8",
+    "op": "motion_guided_sampling",
+    "what": "Abnormal classes: clips are sampled from inside the proposed segments (farthest-point spread, never across a shot cut); Normal: uniform + high-motion hard negatives.",
+    "videos": {
+      "Vandalism032_x264": "S8_motion_guided_sampling/Vandalism032_x264",
+      "Vandalism038_x264": "S8_motion_guided_sampling/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S8_motion_guided_sampling/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S8_motion_guided_sampling/Normal_Videos_913_x264",
+      "Fighting018_x264": "S8_motion_guided_sampling/Fighting018_x264",
+      "Robbery137_x264": "S8_motion_guided_sampling/Robbery137_x264",
+      "Vandalism017_x264": "S8_motion_guided_sampling/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S8_motion_guided_sampling/Normal_Videos_656_x264"
+    }
+  },
+  "S8_selected_clips": {
+    "stage": "S8",
+    "op": "selected_clips",
+    "what": "The final clips (16 frames, stride 4 at 12 FPS, ~5.3 s) as filmstrips of the exact 224x224 model input.",
+    "videos": {
+      "Vandalism032_x264": "S8_selected_clips/Vandalism032_x264",
+      "Vandalism038_x264": "S8_selected_clips/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S8_selected_clips/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S8_selected_clips/Normal_Videos_913_x264",
+      "Fighting018_x264": "S8_selected_clips/Fighting018_x264",
+      "Robbery137_x264": "S8_selected_clips/Robbery137_x264",
+      "Vandalism017_x264": "S8_selected_clips/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S8_selected_clips/Normal_Videos_656_x264"
+    }
+  },
+  "S8_quality_gate": {
+    "stage": "S8",
+    "op": "quality_gate",
+    "what": "Each candidate clip is rejected if it is frozen, black, blurry (Laplacian variance below the S1-derived floor), has almost no motion although the class is abnormal, spans a shot cut, or sits in a fade/flash.",
+    "videos": {
+      "Vandalism032_x264": "S8_quality_gate/Vandalism032_x264",
+      "Vandalism038_x264": "S8_quality_gate/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S8_quality_gate/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S8_quality_gate/Normal_Videos_913_x264",
+      "Fighting018_x264": "S8_quality_gate/Fighting018_x264",
+      "Robbery137_x264": "S8_quality_gate/Robbery137_x264",
+      "Vandalism017_x264": "S8_quality_gate/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S8_quality_gate/Normal_Videos_656_x264"
+    }
+  },
+  "X4_dedup": {
+    "stage": "X4",
+    "op": "dedup",
+    "what": "EXISTING op (unchanged): motion-fingerprint deduplication drops a clip whose mean-abs-frame-difference image is more than 0.99 cosine-similar to an already kept clip.",
+    "videos": {
+      "Vandalism032_x264": "X4_dedup/Vandalism032_x264",
+      "Vandalism038_x264": "X4_dedup/Vandalism038_x264",
+      "Normal_Videos_722_x264": "X4_dedup/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "X4_dedup/Normal_Videos_913_x264",
+      "Fighting018_x264": "X4_dedup/Fighting018_x264",
+      "Robbery137_x264": "X4_dedup/Robbery137_x264",
+      "Vandalism017_x264": "X4_dedup/Vandalism017_x264",
+      "Normal_Videos_656_x264": "X4_dedup/Normal_Videos_656_x264"
+    }
+  },
+  "X5_validity_old_vs_new": {
+    "stage": "X5",
+    "op": "validity_old_vs_new",
+    "what": "EXISTING check (std > 0.01) vs the new quality gate on the SAME old-style uniform clips.",
+    "videos": {
+      "Vandalism032_x264": "X5_validity_old_vs_new/Vandalism032_x264",
+      "Vandalism038_x264": "X5_validity_old_vs_new/Vandalism038_x264",
+      "Normal_Videos_722_x264": "X5_validity_old_vs_new/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "X5_validity_old_vs_new/Normal_Videos_913_x264",
+      "Fighting018_x264": "X5_validity_old_vs_new/Fighting018_x264",
+      "Robbery137_x264": "X5_validity_old_vs_new/Robbery137_x264",
+      "Vandalism017_x264": "X5_validity_old_vs_new/Vandalism017_x264",
+      "Normal_Videos_656_x264": "X5_validity_old_vs_new/Normal_Videos_656_x264"
+    }
+  },
+  "S9_clip_package": {
+    "stage": "S9",
+    "op": "clip_package",
+    "what": "The final clip is stored as uint8 (16,224,224,3) RGB .npy (4x smaller than float32, lossless since pixels began as 8-bit) with a JSON sidecar of shot id, motion/people stats, crop boxes, brightness and enhancement flags.",
+    "videos": {
+      "Vandalism032_x264": "S9_clip_package/Vandalism032_x264",
+      "Vandalism038_x264": "S9_clip_package/Vandalism038_x264",
+      "Normal_Videos_722_x264": "S9_clip_package/Normal_Videos_722_x264",
+      "Normal_Videos_913_x264": "S9_clip_package/Normal_Videos_913_x264",
+      "Fighting018_x264": "S9_clip_package/Fighting018_x264",
+      "Robbery137_x264": "S9_clip_package/Robbery137_x264",
+      "Vandalism017_x264": "S9_clip_package/Vandalism017_x264",
+      "Normal_Videos_656_x264": "S9_clip_package/Normal_Videos_656_x264"
+    }
+  },
+  "S9_dataset_report": {
+    "stage": "S9",
+    "op": "dataset_report",
+    "what": "Per-class distributions of motion energy, flow entropy, people count, brightness, activity and foreground ratio over the packaged clips, plus how many candidates each quality-gate rule rejected and the dedup effect.",
+    "videos": {
+      "ALL": "S9_dataset_report/ALL"
+    }
+  }
+}

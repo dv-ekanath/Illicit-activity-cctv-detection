@@ -1,0 +1,14 @@
+{
+  "frac_dark_frames": 0.0,
+  "n_dark_runs": 0,
+  "old_extract_clips_would_enhance": false,
+  "old_infer_zerodce_would_enhance": false,
+  "darkest_frame": {
+    "gray_mean": 107.60223721590908,
+    "hsv_v_mean": 114.14955610795455
+  },
+  "brightest_frame": {
+    "gray_mean": 108.89536576704545,
+    "hsv_v_mean": 115.31097301136364
+  }
+}

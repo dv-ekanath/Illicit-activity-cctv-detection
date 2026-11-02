@@ -1,0 +1,5 @@
+{
+  "diff_thr": 0.05,
+  "min_run": 4,
+  "black_mean_max": 10
+}

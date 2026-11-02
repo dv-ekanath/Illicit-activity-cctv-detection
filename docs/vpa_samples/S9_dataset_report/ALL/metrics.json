@@ -1,0 +1,250 @@
+{
+  "n_clips": 106,
+  "n_videos": 8,
+  "n_video_fold_entries": 8,
+  "per_class": {
+    "Fighting": {
+      "clips": 13,
+      "videos": 1,
+      "motion_energy_mean": {
+        "mean": 0.21816153846153846,
+        "p10": 0.13564,
+        "p50": 0.2097,
+        "p90": 0.3669800000000001
+      },
+      "flow_entropy_mean": {
+        "mean": 0.40769999999999995,
+        "p10": 0.26356,
+        "p50": 0.412,
+        "p90": 0.52022
+      },
+      "people_count_mean": {
+        "mean": 4.063061538461538,
+        "p10": 3.10822,
+        "p50": 3.5902,
+        "p90": 5.20656
+      },
+      "brightness_after": {
+        "mean": 88.63016923076923,
+        "p10": 83.964,
+        "p50": 89.6929,
+        "p90": 90.86456
+      },
+      "activity_mean": {
+        "mean": 0.29959230769230766,
+        "p10": 0.20362000000000002,
+        "p50": 0.2896,
+        "p90": 0.42962000000000006
+      },
+      "fg_ratio_mean": {
+        "mean": 0.06095384615384615,
+        "p10": 0.0115,
+        "p50": 0.0305,
+        "p90": 0.12426
+      },
+      "selection_kinds": {
+        "proposal": 13
+      }
+    },
+    "Robbery": {
+      "clips": 16,
+      "videos": 1,
+      "motion_energy_mean": {
+        "mean": 0.29835625,
+        "p10": 0.1923,
+        "p50": 0.29005000000000003,
+        "p90": 0.4379
+      },
+      "flow_entropy_mean": {
+        "mean": 0.7282,
+        "p10": 0.5899,
+        "p50": 0.7652,
+        "p90": 0.81075
+      },
+      "people_count_mean": {
+        "mean": 3.0922187500000002,
+        "p10": 2.68035,
+        "p50": 3.0328,
+        "p90": 3.83605
+      },
+      "brightness_after": {
+        "mean": 102.856225,
+        "p10": 99.16980000000001,
+        "p50": 102.2407,
+        "p90": 106.9756
+      },
+      "activity_mean": {
+        "mean": 0.31585,
+        "p10": 0.1941,
+        "p50": 0.3294,
+        "p90": 0.44730000000000003
+      },
+      "fg_ratio_mean": {
+        "mean": 0.03121875,
+        "p10": 0.0109,
+        "p50": 0.0296,
+        "p90": 0.04525
+      },
+      "selection_kinds": {
+        "proposal": 16
+      }
+    },
+    "Vandalism": {
+      "clips": 29,
+      "videos": 3,
+      "motion_energy_mean": {
+        "mean": 0.2656758620689655,
+        "p10": 0.162,
+        "p50": 0.2628,
+        "p90": 0.35924
+      },
+      "flow_entropy_mean": {
+        "mean": 0.36956896551724144,
+        "p10": 0.1796,
+        "p50": 0.3497,
+        "p90": 0.5555
+      },
+      "people_count_mean": {
+        "mean": 0.6636448275862069,
+        "p10": 0.22294000000000003,
+        "p50": 0.6557,
+        "p90": 0.9836
+      },
+      "brightness_after": {
+        "mean": 94.54392758620689,
+        "p10": 75.34479999999999,
+        "p50": 107.2284,
+        "p90": 110.5578
+      },
+      "activity_mean": {
+        "mean": 0.18004827586206898,
+        "p10": 0.11546000000000001,
+        "p50": 0.1676,
+        "p90": 0.24945999999999996
+      },
+      "fg_ratio_mean": {
+        "mean": 0.0185,
+        "p10": 0.00472,
+        "p50": 0.0149,
+        "p90": 0.0383
+      },
+      "selection_kinds": {
+        "proposal": 29
+      }
+    },
+    "Normal": {
+      "clips": 48,
+      "videos": 3,
+      "motion_energy_mean": {
+        "mean": 0.5369604166666666,
+        "p10": 0.01175,
+        "p50": 0.0487,
+        "p90": 2.318890000000001
+      },
+      "flow_entropy_mean": {
+        "mean": 0.3359916666666667,
+        "p10": 0.0629,
+        "p50": 0.29025,
+        "p90": 0.5629000000000001
+      },
+      "people_count_mean": {
+        "mean": 2.8872958333333334,
+        "p10": 0.0,
+        "p50": 2.6066000000000003,
+        "p90": 7.078690000000001
+      },
+      "brightness_after": {
+        "mean": 117.90988541666667,
+        "p10": 95.78018,
+        "p50": 108.50625,
+        "p90": 147.95634
+      },
+      "activity_mean": {
+        "mean": 0.1938895833333333,
+        "p10": 0.04051,
+        "p50": 0.1013,
+        "p90": 0.4314200000000003
+      },
+      "fg_ratio_mean": {
+        "mean": 0.05959999999999999,
+        "p10": 0.00027,
+        "p50": 0.00535,
+        "p90": 0.24674
+      },
+      "selection_kinds": {
+        "hard_negative": 8,
+        "uniform": 40
+      }
+    }
+  },
+  "gate_rejections": {
+    "Fighting": {
+      "frozen": 0,
+      "black": 0,
+      "blurry": 0,
+      "low_motion": 1,
+      "shot_cut": 0,
+      "illumination_change": 0
+    },
+    "Robbery": {
+      "frozen": 0,
+      "black": 0,
+      "blurry": 0,
+      "low_motion": 0,
+      "shot_cut": 0,
+      "illumination_change": 0
+    },
+    "Vandalism": {
+      "frozen": 0,
+      "black": 0,
+      "blurry": 0,
+      "low_motion": 0,
+      "shot_cut": 0,
+      "illumination_change": 0
+    },
+    "Normal": {
+      "frozen": 0,
+      "black": 0,
+      "blurry": 0,
+      "low_motion": 0,
+      "shot_cut": 0,
+      "illumination_change": 0
+    }
+  },
+  "dedup": {
+    "Fighting": {
+      "before": 13,
+      "after": 13
+    },
+    "Robbery": {
+      "before": 24,
+      "after": 24
+    },
+    "Vandalism": {
+      "before": 29,
+      "after": 29
+    },
+    "Normal": {
+      "before": 66,
+      "after": 66
+    }
+  },
+  "proposals": {
+    "Fighting": {
+      "videos_with_gt": 1,
+      "mean_tiou": 0.3469387755102041
+    },
+    "Robbery": {
+      "videos_with_gt": 1,
+      "mean_tiou": 0.9603174603174603
+    },
+    "Vandalism": {
+      "videos_with_gt": 1,
+      "mean_tiou": 0.15141955835962145
+    },
+    "Normal": {
+      "videos_with_gt": 0,
+      "mean_tiou": null
+    }
+  }
+}

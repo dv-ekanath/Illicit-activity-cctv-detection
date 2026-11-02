@@ -1,0 +1,14 @@
+{
+  "n_segments": 1,
+  "segments_s": [
+    [
+      4.2,
+      20.3
+    ]
+  ],
+  "proposal_method": "hysteresis+peaks",
+  "gt_s": [],
+  "gt_eval": null,
+  "frames": 244,
+  "valid_frac": 0.9508196721311475
+}

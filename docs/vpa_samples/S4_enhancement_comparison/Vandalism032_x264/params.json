@@ -1,0 +1,12 @@
+{
+  "compare": [
+    "raw",
+    "CLAHE",
+    "Zero-DCE++",
+    "Zero-DCE++ + denoise + deflicker"
+  ],
+  "dark_threshold": 50,
+  "alpha_ema": 0.6,
+  "denoiser": "fastdvdnet",
+  "simulated_low_light": false
+}

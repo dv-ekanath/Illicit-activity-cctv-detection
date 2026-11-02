@@ -1,0 +1,9 @@
+{
+  "label": "Vandalism",
+  "clips_per_video": {
+    "train": 16,
+    "test": 8
+  },
+  "min_start_sep": 16,
+  "hard_negative_frac": null
+}

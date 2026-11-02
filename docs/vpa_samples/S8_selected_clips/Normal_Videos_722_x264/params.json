@@ -1,0 +1,6 @@
+{
+  "clip_len": 16,
+  "stride": 4,
+  "framing": "actor",
+  "size": 224
+}

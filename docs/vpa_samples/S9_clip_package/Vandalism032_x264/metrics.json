@@ -1,0 +1,214 @@
+{
+  "bytes_uint8": 2408448,
+  "bytes_float32_legacy": 9633792,
+  "saving_factor": 4.0,
+  "file_bytes": 2408576,
+  "sidecar": {
+    "pipeline": "vpa-1.0",
+    "video": "Vandalism032_x264",
+    "label": "Vandalism",
+    "split": "train",
+    "fold": 1,
+    "clip_index": 2,
+    "start_frame_12fps": 66,
+    "end_frame_12fps": 126,
+    "start_time_s": 5.5,
+    "end_time_s": 10.583,
+    "frame_indices_12fps": [
+      66,
+      70,
+      74,
+      78,
+      82,
+      86,
+      90,
+      94,
+      98,
+      102,
+      106,
+      110,
+      114,
+      118,
+      122,
+      126
+    ],
+    "source_frame_indices": [
+      165,
+      175,
+      185,
+      195,
+      205,
+      215,
+      225,
+      235,
+      245,
+      255,
+      265,
+      275,
+      285,
+      295,
+      305,
+      315
+    ],
+    "source_times_s": [
+      5.5,
+      5.8333,
+      6.1667,
+      6.5,
+      6.8333,
+      7.1667,
+      7.5,
+      7.8333,
+      8.1667,
+      8.5,
+      8.8333,
+      9.1667,
+      9.5,
+      9.8333,
+      10.1667,
+      10.5
+    ],
+    "shot_id": 0,
+    "n_shots_in_video": 1,
+    "selection_kind": "proposal",
+    "window_activity": 0.2753,
+    "stats": {
+      "motion_energy_mean": 0.4326,
+      "motion_energy_max": 1.8118,
+      "flow_entropy_mean": 0.1902,
+      "flow_div_mean": 0.1183,
+      "flow_curl_mean": 0.1146,
+      "fg_ratio_mean": 0.035,
+      "blob_count_mean": 3.0164,
+      "people_count_mean": 0.8033,
+      "people_count_max": 2,
+      "min_person_distance_mean": 5.0958,
+      "max_iou_mean": 0.0057,
+      "speed_max_mean": 0.0219,
+      "interaction_mean": 0.0682,
+      "brightness_before": 33.2446,
+      "brightness_after": 107.2392,
+      "enhanced_fraction": 1.0,
+      "activity_mean": 0.2753
+    },
+    "crop_boxes_xyxy": [
+      [
+        0,
+        19,
+        138,
+        157
+      ],
+      [
+        0,
+        0,
+        173,
+        166
+      ],
+      [
+        0,
+        0,
+        175,
+        166
+      ],
+      [
+        0,
+        1,
+        165,
+        166
+      ],
+      [
+        1,
+        15,
+        147,
+        161
+      ],
+      [
+        10,
+        12,
+        155,
+        157
+      ],
+      [
+        5,
+        0,
+        194,
+        166
+      ],
+      [
+        19,
+        14,
+        162,
+        157
+      ],
+      [
+        27,
+        22,
+        159,
+        153
+      ],
+      [
+        27,
+        22,
+        155,
+        151
+      ],
+      [
+        55,
+        27,
+        181,
+        153
+      ],
+      [
+        31,
+        0,
+        199,
+        166
+      ],
+      [
+        33,
+        20,
+        168,
+        155
+      ],
+      [
+        40,
+        15,
+        186,
+        161
+      ],
+      [
+        41,
+        21,
+        174,
+        155
+      ],
+      [
+        11,
+        0,
+        206,
+        166
+      ]
+    ],
+    "framing": "actor",
+    "video_content_box_xyxy": [
+      52,
+      32,
+      268,
+      198
+    ],
+    "overlay_removed": true,
+    "quality_gate": {
+      "passed": true,
+      "reasons": []
+    },
+    "proposal_method": "hysteresis+peaks",
+    "dtype": "uint8",
+    "shape": [
+      16,
+      224,
+      224,
+      3
+    ],
+    "color": "RGB"
+  }
+}

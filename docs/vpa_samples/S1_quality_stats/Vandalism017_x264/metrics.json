@@ -1,0 +1,18 @@
+{
+  "luma_median": 69.2,
+  "luma_p10": 67.36,
+  "sharp_median": 586.65,
+  "noise_median": 0.959,
+  "block_median": 1.056,
+  "contrast": 207.5,
+  "frozen_frac": 0.1891,
+  "black_frac": 0.0,
+  "cam_moving_frac": 0.0,
+  "overlay_components": 2,
+  "bars": {
+    "top": 10,
+    "bottom": 12,
+    "left": 0,
+    "right": 0
+  }
+}

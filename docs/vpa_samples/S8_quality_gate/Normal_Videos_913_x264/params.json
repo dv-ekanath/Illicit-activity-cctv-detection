@@ -1,0 +1,7 @@
+{
+  "frozen_frac_max": 0.5,
+  "black_luma_max": 10,
+  "blur_lap_var_min": 130.0,
+  "abnormal_min_motion": 0.08,
+  "old_std_min": 0.01
+}

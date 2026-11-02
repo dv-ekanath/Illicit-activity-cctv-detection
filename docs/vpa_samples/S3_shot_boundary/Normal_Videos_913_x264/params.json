@@ -1,0 +1,7 @@
+{
+  "detector": "HSV hist + edge-change ratio",
+  "hist_abs_min": 0.4,
+  "hist_mad_k": 6.0,
+  "ecr_min": 0.55,
+  "min_gap_frames": 12
+}

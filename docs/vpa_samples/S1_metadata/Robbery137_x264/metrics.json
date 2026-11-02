@@ -1,0 +1,11 @@
+{
+  "codec": "h264",
+  "width": 320,
+  "height": 240,
+  "fps_avg": 30.0,
+  "fps_measured": 30.0,
+  "vfr": false,
+  "bit_rate": 1939976,
+  "duration_s": 73.1,
+  "n_frames": 2193
+}

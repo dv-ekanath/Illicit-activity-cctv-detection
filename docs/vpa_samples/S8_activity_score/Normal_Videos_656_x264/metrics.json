@@ -1,0 +1,9 @@
+{
+  "n_segments": 0,
+  "segments_s": [],
+  "proposal_method": "hysteresis+peaks",
+  "gt_s": [],
+  "gt_eval": null,
+  "frames": 726,
+  "valid_frac": 1.0
+}

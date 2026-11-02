@@ -1,0 +1,24 @@
+{
+  "showcase_frame": 375,
+  "mean_mag": 0.5215475559234619,
+  "direction_entropy": 0.9047247958488803,
+  "mean_abs_div": 0.04451495409011841,
+  "mean_abs_curl": 0.032065778970718384,
+  "raft_vs_farneback_corr": 0.9909108771055422,
+  "raft_pairs": [
+    2,
+    319,
+    375,
+    637,
+    954,
+    1271,
+    1588,
+    1906,
+    2223,
+    2540,
+    2857,
+    3175,
+    3492
+  ],
+  "raft_model": "raft_small (torchvision, pretrained)"
+}

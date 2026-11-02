@@ -1,0 +1,80 @@
+{
+  "summary": {
+    "n_videos": 300,
+    "n_ok": 300,
+    "n_failed": 0,
+    "failed": [],
+    "fps": [
+      30.0
+    ],
+    "resolutions": [
+      "320x240"
+    ],
+    "codecs": [
+      "h264",
+      "mjpeg"
+    ],
+    "vfr_videos": 0,
+    "with_letterbox_bars": 206,
+    "with_overlay": 218,
+    "with_cut_candidates": 72,
+    "moving_camera_videos": 2,
+    "moving_camera_fraction": 0.0067,
+    "per_class": {
+      "Fighting": {
+        "n": 50,
+        "duration_median_s": 117.80000000000001,
+        "luma_median": 91.625,
+        "sharp_median": 986.71,
+        "noise_median": 1.757,
+        "bars": 35,
+        "overlay": 39
+      },
+      "Robbery": {
+        "n": 150,
+        "duration_median_s": 65.51650000000001,
+        "luma_median": 99.985,
+        "sharp_median": 1992.4,
+        "noise_median": 2.9415,
+        "bars": 91,
+        "overlay": 101
+      },
+      "Vandalism": {
+        "n": 50,
+        "duration_median_s": 64.8,
+        "luma_median": 74.42500000000001,
+        "sharp_median": 1061.07,
+        "noise_median": 1.9340000000000002,
+        "bars": 39,
+        "overlay": 39
+      },
+      "Normal": {
+        "n": 50,
+        "duration_median_s": 53.5835,
+        "luma_median": 82.155,
+        "sharp_median": 2048.685,
+        "noise_median": 3.8055000000000003,
+        "bars": 41,
+        "overlay": 39
+      }
+    }
+  },
+  "thresholds": {
+    "dark_threshold": 50.0,
+    "dark_percentile": 5,
+    "dark_threshold_tail_raw": 48.54817899722359,
+    "dark_threshold_otsu": 76.0,
+    "frac_frames_below": {
+      "30": 0.008425977703787689,
+      "40": 0.02820424684872333,
+      "50": 0.048278020326183425,
+      "60": 0.1132694784040714,
+      "70": 0.17109700853166154,
+      "80": 0.3668162999368975
+    },
+    "blur_lap_var_p5": 268.5315,
+    "blur_lap_var_p10": 413.188,
+    "sharp_median": 1594.01,
+    "noise_median": 2.6180000000000003
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "n_cuts": 0,
+  "cut_frames": [],
+  "cut_times_s": [],
+  "method": "both",
+  "cuts_classical": [],
+  "cuts_transnetv2": [],
+  "transnetv2_error": null,
+  "pyscenedetect_cut_times_s": [],
+  "max_hist_dist": 0.0507592271126358
+}

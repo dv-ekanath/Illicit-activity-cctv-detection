@@ -1,0 +1,11 @@
+{
+  "dtype": "uint8",
+  "shape": [
+    16,
+    224,
+    224,
+    3
+  ],
+  "file": "Vandalism038_x264_c0005.npy",
+  "sidecar": "Vandalism038_x264_c0005.json"
+}

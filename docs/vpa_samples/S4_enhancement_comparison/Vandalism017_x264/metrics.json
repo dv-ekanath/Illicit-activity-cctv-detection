@@ -1,0 +1,42 @@
+{
+  "raw": {
+    "mean_luma": 22.270289378894077,
+    "flicker_index": 0.019080440587450502,
+    "noise_sigma": 1.7430887989412591,
+    "niqe": 7.565160636101899,
+    "brisque": 23.972671508789062,
+    "yolo_persons_per_frame": 0.0
+  },
+  "CLAHE": {
+    "mean_luma": 47.20820028556594,
+    "flicker_index": 0.07842414886515335,
+    "noise_sigma": 4.618278635269807,
+    "niqe": 8.373299532811984,
+    "brisque": 31.107986450195312,
+    "yolo_persons_per_frame": 0.0
+  },
+  "Zero-DCE++": {
+    "mean_luma": 95.91261722806334,
+    "flicker_index": 0.09894067089452635,
+    "noise_sigma": 12.265662204342618,
+    "niqe": 8.689722958340777,
+    "brisque": 47.64253234863281,
+    "yolo_persons_per_frame": 0.0
+  },
+  "Zero-DCE++ + denoise + deflicker": {
+    "mean_luma": 96.071316442757,
+    "flicker_index": 0.0704368324432575,
+    "noise_sigma": 6.969942071264168,
+    "niqe": 6.668301449122311,
+    "brisque": 41.19023132324219,
+    "yolo_persons_per_frame": 0.0
+  },
+  "original bright frames (reference)": {
+    "mean_luma": 74.15105992017135,
+    "flicker_index": 0.04686540387182926,
+    "noise_sigma": 0.9633615464273935,
+    "niqe": 4.84351383782662,
+    "brisque": 42.24760437011719,
+    "yolo_persons_per_frame": 0.0
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "mog2": {
+    "history": 120,
+    "var_threshold": 20,
+    "warmup_frames": 24
+  },
+  "shadow": {
+    "v_low": 0.45,
+    "v_high": 0.95,
+    "s_tol": 40,
+    "h_tol": 12
+  },
+  "morph": {
+    "open": 3,
+    "close": 7
+  },
+  "min_blob_area": 40
+}

@@ -1,0 +1,21 @@
+{
+  "n_components": 2,
+  "area_frac": 0.00161,
+  "components": [
+    {
+      "x": 296,
+      "y": 24,
+      "w": 24,
+      "h": 9,
+      "density": 0.181
+    },
+    {
+      "x": 293,
+      "y": 233,
+      "w": 20,
+      "h": 7,
+      "density": 0.207
+    }
+  ],
+  "mean_abs_change_in_masked_px": 0.10002604166666666
+}

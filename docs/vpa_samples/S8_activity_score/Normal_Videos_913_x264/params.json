@@ -1,0 +1,16 @@
+{
+  "weights": {
+    "motion": 0.45,
+    "fg": 0.15,
+    "interaction": 0.4
+  },
+  "motion_ref": 0.8,
+  "fg_ref": 0.1,
+  "sg_window": 25,
+  "sg_poly": 3,
+  "hysteresis": {
+    "high": 0.25,
+    "low": 0.15
+  },
+  "peak_prominence": 0.08
+}

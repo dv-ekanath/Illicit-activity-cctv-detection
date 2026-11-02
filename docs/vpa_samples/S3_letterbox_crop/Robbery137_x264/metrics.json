@@ -1,0 +1,23 @@
+{
+  "box": [
+    0,
+    32,
+    320,
+    208
+  ],
+  "bars": {
+    "top": 32,
+    "bottom": 32,
+    "left": 0,
+    "right": 0
+  },
+  "has_bars": true,
+  "size_before": [
+    320,
+    240
+  ],
+  "size_after": [
+    320,
+    176
+  ]
+}

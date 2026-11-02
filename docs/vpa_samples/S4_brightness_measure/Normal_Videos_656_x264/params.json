@@ -1,0 +1,6 @@
+{
+  "measure": "mean luma Y (BT.601)",
+  "dark_threshold": 50,
+  "smooth_window": 9,
+  "hysteresis": 5
+}

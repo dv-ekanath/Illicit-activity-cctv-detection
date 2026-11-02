@@ -1,0 +1,12 @@
+{
+  "n_frames": 3493,
+  "n_frozen": 5,
+  "n_black": 0,
+  "frozen_runs": [
+    [
+      381,
+      385
+    ]
+  ],
+  "frozen_frac": 0.0014
+}

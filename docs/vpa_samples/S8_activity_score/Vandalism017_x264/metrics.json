@@ -1,0 +1,33 @@
+{
+  "n_segments": 2,
+  "segments_s": [
+    [
+      0.0,
+      12.9
+    ],
+    [
+      16.0,
+      29.5
+    ]
+  ],
+  "proposal_method": "hysteresis+peaks",
+  "gt_s": [
+    [
+      9.0,
+      11.0
+    ],
+    [
+      26.0,
+      28.0
+    ]
+  ],
+  "gt_eval": {
+    "tiou": 0.15141955835962145,
+    "precision": 0.15141955835962145,
+    "recall": 1.0,
+    "pred_frames": 317,
+    "gt_frames": 48
+  },
+  "frames": 405,
+  "valid_frac": 0.9975308641975309
+}

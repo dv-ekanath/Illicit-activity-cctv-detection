@@ -1,0 +1,13 @@
+{
+  "frame": 73,
+  "crop_box": [
+    63,
+    0,
+    320,
+    176
+  ],
+  "person_found_frac": 0.9977194982896237,
+  "center_jitter_px_raw": 2.621862091430246,
+  "center_jitter_px_smoothed": 1.219105151194605,
+  "crop_side_px": 257
+}

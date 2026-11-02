@@ -1,0 +1,5 @@
+{
+  "old": "std>0.01",
+  "new": "quality gate",
+  "clips": "old uniform"
+}

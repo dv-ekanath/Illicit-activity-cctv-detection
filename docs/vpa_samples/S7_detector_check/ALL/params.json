@@ -1,0 +1,5 @@
+{
+  "conf": 0.25,
+  "imgsz": 640,
+  "rule": "COCO if fine-tuned boxes are confirmed >10 pts less often by COCO than vice versa, or >15 % implausible"
+}

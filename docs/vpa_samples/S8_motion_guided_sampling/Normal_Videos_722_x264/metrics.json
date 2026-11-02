@@ -1,0 +1,9 @@
+{
+  "n_selected": 16,
+  "kinds": {
+    "hard_negative": 4,
+    "uniform": 12
+  },
+  "in_gt_frac": null,
+  "legacy_in_gt_frac": null
+}

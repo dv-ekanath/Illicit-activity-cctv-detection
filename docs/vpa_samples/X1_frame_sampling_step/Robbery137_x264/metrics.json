@@ -1,0 +1,7 @@
+{
+  "src_fps": 30.0,
+  "step": 2,
+  "effective_fps": 15.0,
+  "target_fps": 12,
+  "speed_error_pct": 25.0
+}

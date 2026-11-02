@@ -1,0 +1,6 @@
+{
+  "weights": "stage2_best.pth",
+  "legacy_brightness_threshold": 50,
+  "enhance_size": 256,
+  "forced_for_demo": true
+}

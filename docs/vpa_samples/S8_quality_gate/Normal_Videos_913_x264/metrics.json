@@ -1,0 +1,21 @@
+{
+  "reject_counts": {
+    "frozen": 0,
+    "black": 0,
+    "blurry": 0,
+    "low_motion": 0,
+    "shot_cut": 0,
+    "illumination_change": 0
+  },
+  "reject_counts_old_uniform": {
+    "frozen": 0,
+    "black": 0,
+    "blurry": 0,
+    "low_motion": 0,
+    "shot_cut": 0,
+    "illumination_change": 0
+  },
+  "n_candidates": 18,
+  "n_passed": 18,
+  "rejected": []
+}

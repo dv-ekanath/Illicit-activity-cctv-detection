@@ -1,0 +1,8 @@
+{
+  "n_selected": 16,
+  "kinds": {
+    "proposal": 16
+  },
+  "in_gt_frac": 0.875,
+  "legacy_in_gt_frac": 0.8125
+}

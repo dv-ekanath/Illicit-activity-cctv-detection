@@ -1,0 +1,5 @@
+{
+  "old": "cv2.resize(frame,(640,640))",
+  "new": "letterbox 640x640 (pad black)",
+  "src_size": "320x240"
+}

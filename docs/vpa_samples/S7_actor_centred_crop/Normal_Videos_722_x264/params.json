@@ -1,0 +1,7 @@
+{
+  "margin": 0.25,
+  "min_side": 96,
+  "ema": 0.7,
+  "resize": "letterbox + INTER_AREA",
+  "fallback": "full frame when nobody is detected"
+}

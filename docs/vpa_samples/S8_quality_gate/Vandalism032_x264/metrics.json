@@ -1,0 +1,76 @@
+{
+  "reject_counts": {
+    "frozen": 0,
+    "black": 0,
+    "blurry": 0,
+    "low_motion": 0,
+    "shot_cut": 0,
+    "illumination_change": 0
+  },
+  "reject_counts_old_uniform": {
+    "frozen": 0,
+    "black": 0,
+    "blurry": 0,
+    "low_motion": 9,
+    "shot_cut": 0,
+    "illumination_change": 0
+  },
+  "n_candidates": 5,
+  "n_passed": 5,
+  "rejected": [
+    {
+      "start_s": 0.2,
+      "reasons": [
+        "low_motion"
+      ]
+    },
+    {
+      "start_s": 11.1,
+      "reasons": [
+        "low_motion"
+      ]
+    },
+    {
+      "start_s": 12.5,
+      "reasons": [
+        "low_motion"
+      ]
+    },
+    {
+      "start_s": 14.2,
+      "reasons": [
+        "low_motion"
+      ]
+    },
+    {
+      "start_s": 15.3,
+      "reasons": [
+        "low_motion"
+      ]
+    },
+    {
+      "start_s": 16.8,
+      "reasons": [
+        "low_motion"
+      ]
+    },
+    {
+      "start_s": 17.4,
+      "reasons": [
+        "low_motion"
+      ]
+    },
+    {
+      "start_s": 17.4,
+      "reasons": [
+        "low_motion"
+      ]
+    },
+    {
+      "start_s": 17.4,
+      "reasons": [
+        "low_motion"
+      ]
+    }
+  ]
+}

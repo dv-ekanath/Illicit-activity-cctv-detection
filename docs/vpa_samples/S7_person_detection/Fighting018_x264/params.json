@@ -1,0 +1,6 @@
+{
+  "detector": "coco",
+  "conf": 0.25,
+  "imgsz": 640,
+  "retrained": false
+}

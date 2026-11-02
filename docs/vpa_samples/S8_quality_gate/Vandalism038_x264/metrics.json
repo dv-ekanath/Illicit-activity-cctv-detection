@@ -1,0 +1,95 @@
+{
+  "reject_counts": {
+    "frozen": 0,
+    "black": 0,
+    "blurry": 0,
+    "low_motion": 0,
+    "shot_cut": 0,
+    "illumination_change": 0
+  },
+  "reject_counts_old_uniform": {
+    "frozen": 0,
+    "black": 0,
+    "blurry": 0,
+    "low_motion": 11,
+    "shot_cut": 1,
+    "illumination_change": 1
+  },
+  "n_candidates": 11,
+  "n_passed": 11,
+  "rejected": [
+    {
+      "start_s": 5.8,
+      "reasons": [
+        "low_motion"
+      ]
+    },
+    {
+      "start_s": 11.8,
+      "reasons": [
+        "low_motion"
+      ]
+    },
+    {
+      "start_s": 17.8,
+      "reasons": [
+        "low_motion"
+      ]
+    },
+    {
+      "start_s": 35.3,
+      "reasons": [
+        "low_motion"
+      ]
+    },
+    {
+      "start_s": 41.4,
+      "reasons": [
+        "low_motion"
+      ]
+    },
+    {
+      "start_s": 46.9,
+      "reasons": [
+        "low_motion"
+      ]
+    },
+    {
+      "start_s": 52.8,
+      "reasons": [
+        "low_motion"
+      ]
+    },
+    {
+      "start_s": 59.1,
+      "reasons": [
+        "low_motion"
+      ]
+    },
+    {
+      "start_s": 70.5,
+      "reasons": [
+        "low_motion"
+      ]
+    },
+    {
+      "start_s": 76.6,
+      "reasons": [
+        "shot_cut",
+        "illumination_change"
+      ]
+    },
+    {
+      "start_s": 82.3,
+      "reasons": [
+        "low_motion"
+      ]
+    },
+    {
+      "start_s": 88.2,
+      "reasons": [
+        "low_motion"
+      ]
+    }
+  ]
+}

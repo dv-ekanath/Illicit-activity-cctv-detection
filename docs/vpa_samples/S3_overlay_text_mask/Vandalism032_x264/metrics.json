@@ -1,0 +1,14 @@
+{
+  "n_components": 1,
+  "area_frac": 0.02016,
+  "components": [
+    {
+      "x": 38,
+      "y": 6,
+      "w": 95,
+      "h": 22,
+      "density": 0.253
+    }
+  ],
+  "mean_abs_change_in_masked_px": 1.5158132530120483
+}
