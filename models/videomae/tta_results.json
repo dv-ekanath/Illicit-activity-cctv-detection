@@ -1,0 +1,199 @@
+{
+  "strategy": {
+    "use_tta": true,
+    "use_temporal_reverse": true,
+    "n_views_per_clip": 4,
+    "folds": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "leakage": "none \u2014 each fold evaluated by own model only"
+  },
+  "per_fold": {
+    "1": {
+      "acc": 69.7917,
+      "macro_f1": 69.7625,
+      "f1_scores": {
+        "Fighting": 69.33,
+        "Robbery": 69.74,
+        "Vandalism": 68.48,
+        "Normal": 71.5
+      },
+      "per_acc": {
+        "Fighting": 81.25,
+        "Robbery": 55.21,
+        "Vandalism": 65.62,
+        "Normal": 77.08
+      },
+      "conf": [
+        [
+          78,
+          0,
+          17,
+          1
+        ],
+        [
+          19,
+          53,
+          3,
+          21
+        ],
+        [
+          17,
+          1,
+          63,
+          15
+        ],
+        [
+          15,
+          2,
+          5,
+          74
+        ]
+      ],
+      "n": 384
+    },
+    "2": {
+      "acc": 75.1958,
+      "macro_f1": 74.8475,
+      "f1_scores": {
+        "Fighting": 63.22,
+        "Robbery": 76.33,
+        "Vandalism": 77.84,
+        "Normal": 82.0
+      },
+      "per_acc": {
+        "Fighting": 57.29,
+        "Robbery": 82.29,
+        "Vandalism": 75.79,
+        "Normal": 85.42
+      },
+      "conf": [
+        [
+          55,
+          20,
+          15,
+          6
+        ],
+        [
+          15,
+          79,
+          1,
+          1
+        ],
+        [
+          8,
+          0,
+          72,
+          15
+        ],
+        [
+          0,
+          12,
+          2,
+          82
+        ]
+      ],
+      "n": 383
+    },
+    "3": {
+      "acc": 62.7604,
+      "macro_f1": 62.47,
+      "f1_scores": {
+        "Fighting": 57.69,
+        "Robbery": 53.66,
+        "Vandalism": 64.68,
+        "Normal": 73.85
+      },
+      "per_acc": {
+        "Fighting": 62.5,
+        "Robbery": 45.83,
+        "Vandalism": 67.71,
+        "Normal": 75.0
+      },
+      "conf": [
+        [
+          60,
+          9,
+          12,
+          15
+        ],
+        [
+          26,
+          44,
+          21,
+          5
+        ],
+        [
+          11,
+          13,
+          65,
+          7
+        ],
+        [
+          15,
+          2,
+          7,
+          72
+        ]
+      ],
+      "n": 384
+    },
+    "4": {
+      "acc": 73.4375,
+      "macro_f1": 73.145,
+      "f1_scores": {
+        "Fighting": 68.93,
+        "Robbery": 78.82,
+        "Vandalism": 67.76,
+        "Normal": 77.07
+      },
+      "per_acc": {
+        "Fighting": 63.54,
+        "Robbery": 83.33,
+        "Vandalism": 64.58,
+        "Normal": 82.29
+      },
+      "conf": [
+        [
+          61,
+          13,
+          13,
+          9
+        ],
+        [
+          6,
+          80,
+          4,
+          6
+        ],
+        [
+          14,
+          5,
+          62,
+          15
+        ],
+        [
+          0,
+          9,
+          8,
+          79
+        ]
+      ],
+      "n": 384
+    }
+  },
+  "summary": {
+    "mean_macro_f1": 70.0563,
+    "std_macro_f1": 5.4813,
+    "mean_acc": 70.2964,
+    "per_class_f1_mean": {
+      "Fighting": 64.7925,
+      "Robbery": 69.6375,
+      "Vandalism": 69.69,
+      "Normal": 76.105
+    }
+  }
+}

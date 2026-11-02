@@ -1,0 +1,77 @@
+{
+  "mean_macro_f1": 70.384375,
+  "std_macro_f1": 5.723655000303567,
+  "mean_acc": 70.55727806788512,
+  "per_class_f1": {
+    "Fighting": 67.02250000000001,
+    "Robbery": 68.7975,
+    "Vandalism": 69.875,
+    "Normal": 75.8425
+  },
+  "fold_results": {
+    "1": {
+      "val_acc": 71.09375,
+      "macro_f1": 71.13,
+      "per_class": {
+        "Fighting": 81.25,
+        "Robbery": 56.25,
+        "Vandalism": 67.71,
+        "Normal": 79.17
+      },
+      "f1_scores": {
+        "Fighting": 69.03,
+        "Robbery": 71.05,
+        "Vandalism": 70.65,
+        "Normal": 73.79
+      }
+    },
+    "2": {
+      "val_acc": 75.97911227154047,
+      "macro_f1": 75.84,
+      "per_class": {
+        "Fighting": 66.67,
+        "Robbery": 83.33,
+        "Vandalism": 70.53,
+        "Normal": 83.33
+      },
+      "f1_scores": {
+        "Fighting": 70.33,
+        "Robbery": 77.29,
+        "Vandalism": 76.14,
+        "Normal": 79.6
+      }
+    },
+    "3": {
+      "val_acc": 62.760416666666664,
+      "macro_f1": 62.3475,
+      "per_class": {
+        "Fighting": 65.62,
+        "Robbery": 43.75,
+        "Vandalism": 67.71,
+        "Normal": 73.96
+      },
+      "f1_scores": {
+        "Fighting": 59.72,
+        "Robbery": 51.85,
+        "Vandalism": 65.0,
+        "Normal": 72.82
+      }
+    },
+    "4": {
+      "val_acc": 72.39583333333333,
+      "macro_f1": 72.22,
+      "per_class": {
+        "Fighting": 61.46,
+        "Robbery": 81.25,
+        "Vandalism": 67.71,
+        "Normal": 79.17
+      },
+      "f1_scores": {
+        "Fighting": 69.01,
+        "Robbery": 75.0,
+        "Vandalism": 67.71,
+        "Normal": 77.16
+      }
+    }
+  }
+}
